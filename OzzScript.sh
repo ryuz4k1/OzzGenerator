@@ -22,6 +22,7 @@ setUpNew () {
  withOutProjectFolder=${fullPath//$projectFolder}
  cd "$withOutProjectFolder"
  mkdir $projectFolder
+ cd $projectFolder
  echo '
  -----------------------------
  +                           +
@@ -30,6 +31,39 @@ setUpNew () {
  ----------------------------- '
  echo "Project created"
  echo "You are here now: " "${ADDR[*]}"
+ declare -a ROOT_FOLDERS
+ declare -a SRC_SUB_FOLDERS
+ declare -a PUBLIC_SUB_FOLDERS
+ ROOT_FOLDERS=(bin src public test)
+ SRC_SUB_FOLDERS=(controllers helpers middleware models views api)
+ PUBLIC_SUB_FOLDERS=(js images stylesheets)
+ for i in ${ROOT_FOLDERS[@]}
+ do
+  	if[$i == "bin"];
+		mkdir bin
+		cd bin
+		touch www
+		cd ..
+  	if[$i == "src"];
+		mkdir src
+		cd src
+  		for j in ${SRC_SUB_FOLDERS[@]}
+  		do
+		 mkdir $j
+        	done
+		cd ..
+  	if[$i == "public"];
+		mkdir public
+        	cd public
+        	for j in ${PUBLIC_SUB_FOLDERS[@]}
+        	do
+        	 mkdir $j
+        	done
+		cd ..
+  	if[$i == "test"];
+		mkdir test
+		echo "Test"
+ done
 }
 
 setUpExisting(){
