@@ -1,0 +1,14 @@
+{
+    "app": {
+        "port": 5000
+    },
+    "mongoDB": {
+        "endPoint": "mongodb://<YOUR_HOSTNAME>:<YOUR_PORT>/<YOUR_DB_NAME>"
+    },
+    "development": {
+        "url": "http://localhost:5000"
+    },
+    "production": {
+        "url": "CUSTOM_PRODUCTION_URL"
+    }
+}

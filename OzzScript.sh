@@ -68,6 +68,7 @@ folderAndFileCreator(){
     cd helpers
     cp "$UTILS" "$PWD"
     cp "$TYPES" "$PWD"
+    cp "$CONNECTIONJS" "$PWD"
     cd ..
     cd middleware
     cp "$EX_MIDDLEWARE" "$PWD"
