@@ -32,8 +32,8 @@ This is a bash script. For this reason, Mac OS X and Unix works on all operating
     |  |      ├── index.ejs
     │  ├── app.js  
     │  ├── config.json
-    │  ├── test/
-    │  ├── package.json
+    ├─ test/
+    ├─ package.json
     └─ 
 
 
